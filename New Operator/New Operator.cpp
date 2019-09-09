@@ -29,15 +29,20 @@ public:
 	}
 };
 
+Animal* createAnimal() {
+	Animal* pAnimal = new Animal();
+	pAnimal->setName("Wren");
+	return pAnimal;
+}
+
 
 int main()
 {
-	Animal* pCat1 = new Animal();
-	pCat1->setName("Ishi");
-	pCat1->speak();
+	Animal* pFrog = createAnimal();
+	pFrog->speak();
 
-	delete pCat1;
-	cout << sizeof(pCat1) << endl;
+	delete pFrog;
+
 	return 0;
 }
 
