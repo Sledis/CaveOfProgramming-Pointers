@@ -43,6 +43,32 @@ int main()
 
 	delete pFrog;
 
+	Animal* pAnimal = new Animal[10];
+
+	pAnimal[5].setName("Fred");
+	pAnimal[5].speak();
+
+	delete[] pAnimal;
+
+	char* pMem = new char[1000];
+	delete[] pMem;
+
+	Animal* alphaAnimal = new Animal[26];
+
+	char alpha = 'a';
+	string name(1, alpha);
+	alphaAnimal[0].setName(name);
+	alphaAnimal[0].speak();
+	for (unsigned i = 1; i < 26; i++) {
+		alpha++;
+		string name(1, alpha);
+		alphaAnimal[i].setName(name);
+		alphaAnimal[i].speak();
+	}
+
+
+	delete[] alphaAnimal;
+
 	return 0;
 }
 
